@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <title>목록</title>
+    </head>
+
+    <style>
+        ul.custom-list {
+            list-style: none;
+            padding-left: 1em; /* 들여쓰기 조금 유지 */
+        }
+        
+        ul.custom-list li::before {
+            content: "◆"; /* 마름모 모양 */
+            color: rgb(255, 179, 179);  /* 원하는 색으로 바꿀 수 있어 */
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em; /* 불릿 자리에 정렬되게 */
+        }
+    </style>
+        
+        <ul class="custom-list">
+            <li>&nbsp;&nbsp;하나</li>
+            <li>&nbsp;&nbsp;&nbsp;둘</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;셋</li>
+        </ul>
+        
+    <body>
+        <ul>
+            <li>하나</li>
+            <li>둘</li>
+            <li>셋</li>
+        </ul>
+        <ol>
+            <li>하나</li>
+            <li>둘</li>
+            <li>셋</li>
+        </ol>
+    </body>
+    </html>
