@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<title>표</title>
+<style>
+table {width: 50%; /*표 너비 조절 */
+	border-colloapse: collapes; }
+th, td {
+	border: 1px solid black; 
+	text-align: center;
+	padding:8px; }
+td[colspan="3"] {
+	text-align:center;}
+td[rowspan="2"]{
+	vertical-align: middle;}
+td[colspan="2"]{
+	text-align: center;}
+td[rowspan="2"][colspan="2"]{
+	vertical-align: middle;}
+
+</style>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td colspan="3">A</td>
+	</tr>
