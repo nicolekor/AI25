@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex + Grid 혼합</title>
+  <style>
+    .main-container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: #333;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .card {
+      background: #ff9800;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Flex + Grid 혼합 레이아웃</h2>
+  <div class="main-container">
+    <div class="sidebar">사이드바</div>
+    <div class="content">
+      <div class="card">카드 1</div>
+      <div class="card">카드 2</div>
+      <div class="card">카드 3</div>
+      <div class="card">카드 4</div>
+    </div>
+  </div>
+</body>
+</html>
