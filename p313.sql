@@ -550,5 +550,150 @@ INSERT into mixedtbl values('ejw', '은지원', '경남');
 INSERT into mixedtbl values('jkw', '조관우', '경기');
 INSERT into mixedtbl values('bbk', '바비킴', '서울');
 
--- p407까지
+-- p405
+use	sqldb;
+SELECT * from usertbl;
+show INDEX from usertbl;
+show table status like 'usertbl';
+
+create index idx_usertbl_addr
+	on usertbl (addr);
+
+show INDEX from usertbl;
+
+-- p406
+ANALYZE table usertbl;
+show table status like 'usertbl';
+
+create UNIQUE INDEX idx_usertbl_birthyear
+	on usertbl (birthyear);
     
+create UNIQUE INDEX idx_usertbl_name
+	on usertbl (name);
+ 
+show INDEX from usertbl;
+
+-- p407
+create INDEX idx_usertbl_name_birthyear
+	on usertbl (name, birthyear);
+
+drop INDEX idx_usertbl_name on usertbl;
+
+show INDEX from usertbl;
+
+SELECT * from usertbl where name = '윤종신' and birthyear = '1969';
+SELECT * FROM usertbl WHERE name = '윤종신';
+
+-- p408
+
+create INDEX idx_usertbl_mobile1
+	on usertbl (mobile1);
+    
+SELECT * from usertbl WHERE mobile1 = '011';
+
+show INDEX from usertbl;
+
+drop index idx_usertbl_addr on usertbl;
+drop index idx_usertbl_name_birthyear on usertbl;
+drop index idx_usertbl_mobile1 on usertbl;
+
+-- p409
+create database if not exists indexdb;
+
+use indexdb;
+SELECT count(*) from employees.employees;
+
+create table emp select * from employees.employees order by rand();
+create table emp_c select * from employees.employees order by rand();
+create table emp_Se select * from employees.employees order by rand();
+
+SELECT * from emp limit 5;
+SELECT * from emp_c limit 5;
+SELECT * from emp_Se limit 5;
+
+alter table emp_c add primary key(emp_no);
+alter table emp_Se add index idx_emp_no (emp_no);
+
+SELECT * from emp limit 5;
+SELECT * from emp_c limit 5;
+SELECT * from emp_Se limit 5;
+
+ANALYZE table emp, emp_c, emp_Se;
+
+show index from emp;
+show index from emp_c;
+show index from emp_Se;
+show table status;
+
+-- p414
+
+use indexdb;
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp WHERE emp_no = 100000;
+show GLOBAL status like 'Innodb_pages_read';
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_c WHERE emp_no = 100000;
+show GLOBAL status like 'Innodb_pages_read';
+
+-- p417
+show global status like 'Innodb_pages_read';
+SELECT * from emp WHERE emp_no < 110000;
+show GLOBAL status like 'Innodb_pages_read';
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_c WHERE emp_no < 11000;
+show GLOBAL status like 'Innodb_pages_read';
+
+-- p420
+show global status like 'Innodb_pages_read';
+SELECT * from emp_c WHERE emp_no < 500000 limit 1000000;
+show GLOBAL status like 'Innodb_pages_read';
+
+SELECT * from emp;
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_c IGNORE INDEX(PRIMARY) WHERE emp_no < 500000 limit 1000000;
+show GLOBAL status like 'Innodb_pages_read';
+
+SELECT * from emp_c;
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_Se WHERE emp_no < 11000;
+show GLOBAL status like 'Innodb_pages_read';
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_Se IGNORE INDEX(idx_emp_no) WHERE emp_no < 11000;
+show GLOBAL status like 'Innodb_pages_read';
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_Se WHERE emp_no < 400000 limit 500000;
+show GLOBAL status like 'Innodb_pages_read';
+
+SELECT * from emp_Se where emp_no < 60000 limit 500000;
+
+SELECT * from emp_c where emp_no = 100000;
+
+show global status like 'Innodb_pages_read';
+SELECT * from emp_c where emp_no = 100000;
+show global status like 'Innodb_pages_read';
+
+-- p430
+SELECT * from emp_c where emp_no = 100000 / 1;
+SELECT * from emp;
+
+alter table emp add INDEX idx_gender (gender);
+ANALYZE table emp;
+show index from emp;
+
+SELECT * from emp where gender = 'M' limit 500000;
+
+SELECT * from emp IGNORE INDEX (idx_gender) where gender = 'M' limit 500000;
+
+-- p 436
+use sqldb;
+SELECT name, birthyear, addr from usertbl where userid = 'KKH';
+
+
+
