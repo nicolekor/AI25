@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class post(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
 
@@ -13,3 +13,6 @@ class post(models.Model):
 
     def __str__(self):
         return f'[{self.pk}]{self.title}'
+    
+    def get_absolute_url(self):  #blog 게시글 상세 페이지에서 view on site 버튼 생성
+        return f'/blog/{self.pk}/'
