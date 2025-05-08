@@ -12,7 +12,7 @@ public class CarExample {
 			
 			switch (problemlocation) {
 			case 1:
-				System.out.println("앞왼쪽 HanlookTire로 교체");
+				System.out.println("앞왼쪽 HankookTire로 교체");
 				car.frontLeftTire = new HankookTire("앞왼쪽", 15);
 				break;
 			case 2:
@@ -20,7 +20,7 @@ public class CarExample {
 				car.frontRightTire = new KumhoTire("앞오른쪽", 13);
 				break;
 			case 3:
-				System.out.println("뒤왼쪽 HanlookTire로 교체");
+				System.out.println("뒤왼쪽 HankookTire로 교체");
 				car.backLeftTire = new HankookTire("뒤왼쪽", 14);
 				break;
 			case 4:
