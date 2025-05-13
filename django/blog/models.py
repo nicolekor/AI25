@@ -17,8 +17,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)  #작성일자
     updated_at = models.DateTimeField(auto_now=True)
 
-    # author : 추후 작성 예정
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    # author : 250513 p295까지 완료
+    author = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return f'[{self.pk}]{self.title} :: {self.author}'
@@ -38,4 +38,3 @@ class Post(models.Model):
 # p214
 # 터미널에서 pip install Pillow - python manage.py makemigrations - python manage.py migrate 순서로 진행
 
-# 
