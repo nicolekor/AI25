@@ -1,0 +1,12 @@
+package com.company.study.vo;
+
+
+
+public class memberVO {
+	private int id;
+	private String pw;
+	private String name;
+	private String ph;
+	private int age;
+
+}
