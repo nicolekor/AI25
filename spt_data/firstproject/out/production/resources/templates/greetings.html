@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<!-- header include -->
+<!-- Include header -->
 <div th:insert="~{layouts/header :: header}"></div>
 
-<!--content-->
 <div class="bg-dark text-white p-5">
-  <h1> <span th:text="${username}" /> 님 💡 반가워요</h1>
+  <h1><span th:text="${username}" />님 반갑습니다.</h1>
 </div>
 
-<!-- footer include -->
+<!-- Include footer -->
 <div th:insert="~{layouts/footer :: footer}"></div>
-
-</html>
