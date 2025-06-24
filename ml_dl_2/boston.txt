@@ -1,0 +1,15 @@
+import pandas as pd
+import numpy as np
+
+data_url = "http://lib.stat.cmu.edu/datasets/boston"
+raw_df = pd.read_csv(data_url, sep="\\s+", skiprows=22, header=None)
+
+data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+target = raw_df.values[1::2, 2]
+
+# 데이터를 DataFrame으로 구성 (컬럼 이름은 직접 설정해야 합니다)
+X = pd.DataFrame(data, columns=['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT'])
+y = pd.DataFrame(target, columns=['MEDV'])
+
+# 데이터세트를 학습 세트와 테스트 세트로 분할합니다.
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
