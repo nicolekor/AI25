@@ -7,15 +7,16 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sqldb
+    url: jdbc:mysql://localhost:3306/webdb
     username: webuser
     password: 54321
 
   jpa:
+    show-sql: true
     properties:
       hibernate:
-        show-sql: true
         format_sql: true
+    hibernate:
         ddl-auto : update
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
