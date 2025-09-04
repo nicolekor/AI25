@@ -1,0 +1,1 @@
+print("pyinstaller로 exe 만들기")
