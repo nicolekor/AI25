@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="sec03.exam01.Week"/>
+    <fullyQualifiedTypeName name="sec03.exam02.Korean"/>
+    <fullyQualifiedTypeName name="sec01.exam03.Calculator"/>
+    <fullyQualifiedTypeName name="sec01.exam03.Computer"/>
+    <fullyQualifiedTypeName name="sec02.exam03.KumhoTire"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="sec02.exam03.HankookTire"/>
+    <fullyQualifiedTypeName name="java.rmi.Remote"/>
+    <fullyQualifiedTypeName name="sec01.exam05.SmartTelevisionExample"/>
+    <fullyQualifiedTypeName name="sec01.exam05.SmartTelevision"/>
+    <fullyQualifiedTypeName name="sec01.exam05.Searchable"/>
+    <fullyQualifiedTypeName name="sec01.exam03.RemoteControl"/>
+    <fullyQualifiedTypeName name="sec01.exam04.Audio"/>
+    <fullyQualifiedTypeName name="sec01.exam06.MyClass"/>
+    <fullyQualifiedTypeName name="sec01.exam04.Television"/>
+    <fullyQualifiedTypeName name="sec02.exam01.Tire"/>
+    <fullyQualifiedTypeName name="sec02.exam05.InterfaceB"/>
+    <fullyQualifiedTypeName name="sec02.exam05.InterfaceC"/>
+    <fullyQualifiedTypeName name="sec02.exam05.ImplementationC"/>
+    <fullyQualifiedTypeName name="sec02.exam05.InterfaceA"/>
+    <fullyQualifiedTypeName name="sec01.exam01.A.B"/>
+    <fullyQualifiedTypeName name="sec01.exam01.A.C"/>
+    <fullyQualifiedTypeName name="sec02.exam01.Anonymous"/>
+    <fullyQualifiedTypeName name="sec02.exam01.Person"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.Writer"/>
+    <fullyQualifiedTypeName name="java.io.Reader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+</qualifiedTypeNameHistroy>

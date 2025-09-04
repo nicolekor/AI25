@@ -1,0 +1,13 @@
+// p564 arraylist 랑 linkedlist 비교
+
+package sec01.exam03;
+
+public class LinkedListExample {
+
+	public static void main(String[] args) {
+		List<String> list1 = new ArrayList<String>();
+		List<String> list2 = new LinkedList<String>();
+		
+	}
+
+}
